@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stupid Hackathon Antananarivo 2025</title>
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #f5f5f5;
+      --fg-dim: #bdbdbd;
+      --accent: #5dd9ff;
+      --accent-2: #ff7edb;
+      --card: rgba(255,255,255,0.03);
+      --border: rgba(255,255,255,0.08);
+      --radius: 14px;
+      --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2, h3, h4 { margin: 0 0 0.6em; line-height: 1.25; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+    h3 { font-size: 1.2rem; color: var(--accent-2); letter-spacing: .5px; text-transform: uppercase; }
+    p { margin: 0 0 1em; }
+    ul { margin: 0 0 1em 1.2em; padding: 0; }
+    li { margin: 0.3em 0; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 4rem 1.2rem; }
+
+    /* Top nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(0,0,0,0.6);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .inner {
+      max-width: 960px; margin: 0 auto; padding: .6rem 1.2rem;
+      display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+    nav a {
+      font-size: .9rem; padding: .2rem .6rem; border-radius: 6px;
+    }
+    nav a:hover { background: var(--card); }
+
+    /* Card/section */
+    .section {
+      margin: 3rem 0; padding: 2rem 1.6rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.02);
+    }
+    .meta {
+      color: var(--fg-dim); font-size: .95rem; margin-top: .4rem; display: flex; gap: .8rem; flex-wrap: wrap;
+    }
+    .pill {
+      display: inline-block; padding: .15rem .55rem; border-radius: 999px; background: var(--border);
+      font-size: .75rem; letter-spacing: .3px; text-transform: uppercase; color: var(--fg-dim);
+    }
+    /* Table styling */
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    th, td { padding: .6rem .5rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { color: var(--accent); font-weight: 600; }
+    tbody tr:last-child td { border-bottom: none; }
+
+    /* Details/toggles (Notion-like) */
+    details { margin: 1rem 0; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.2rem; }
+    summary { cursor: pointer; font-weight: 600; }
+    summary::-webkit-details-marker { display:none; }
+    summary:before { content:"▶"; display:inline-block; margin-right:.6rem; transition: transform .2s; }
+    details[open] summary:before { transform: rotate(90deg); }
+
+    /* Grid helpers */
+    .grid { display: grid; gap: 1rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+    /* Footer */
+    footer { margin: 4rem 0 2rem; text-align: center; color: var(--fg-dim); font-size: .8rem; }
+
+    code { font-family: var(--font-mono); font-size: .85rem; background: rgba(255,255,255,0.07); padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="inner">
+      <a href="#intro">Accueil</a>
+      <a href="#dresscode">Dress Code</a>
+      <a href="#bring">À apporter</a>
+      <a href="#goodtoknow">Good to know</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#prizes">Prix</a>
+      <a href="#criteres">Critères</a>
+      <a href="#medias">Médias</a>
+      <a href="#liens">Liens</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Intro -->
+    <section id="intro" class="section">
+      <h1>Stupid Hackathon Antananarivo 2025</h1>
+      <div class="meta">
+        <span>🗓 Samedi 26 juillet 2025 — 8h30 à 17h30</span>
+        <span>📍 École 42 Antananarivo — 4GC5+P75, Andraharo, Antananarivo, Madagascar</span>
+      </div>
+      <p style="margin-top:1.5rem; font-size:1.05rem; max-width:720px;">
+        C’est quoi le but du hackathon ? Fun et sans pression, où l'on célèbre la créativité inutile et la stupidité géniale.
+      </p>
+    </section>
+
+    <!-- Dress code -->
+    <section id="dresscode" class="section">
+      <h2>👗 Dress Code</h2>
+      <p>Costard, pyjama... <strong>ou les deux !</strong><br>(Zoom friendly 😄 Vas-y joue le jeu stp)</p>
+    </section>
+
+    <!-- Bring -->
+    <section id="bring" class="section">
+      <h2>💻 Ce qu’il faut apporter</h2>
+      <ul>
+        <li>Pas besoin de ton ordi → On utilisera les ordis de 42.</li>
+        <li>Des petits ( grand) snackssss !</li>
+        <li>Ton cerveau, un peu de stupidité, et ta bonne humeur (<em>obligatoire</em> stp, on veut pas de rabat-joie).</li>
+      </ul>
+    </section>
+
+    <!-- Good to know -->
+    <section id="goodtoknow" class="section">
+      <h2>📝 Good to know (pour pas qu’il y ait des gens tristes) – Avant le jour J</h2>
+      <details open>
+        <summary>Inscription & équipes</summary>
+        <ul>
+          <li>Inscris-toi sur DevPost (le lien arrive jeudi 🧨).</li>
+          <li>Tout le monde doit joindre une équipe. Si t’es inscrit individuellement, on te matchera à une équipe ou tu peux direct regarder les teams sur DevPost.</li>
+          <li>Chaque team sera <em>paired</em> avec une autre team ;)</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Organisation & Discord</summary>
+        <p>Rejoins le Discord pour former les équipes et organiser ton délire (on vous ping dès que c’est prêt).</p>
+      </details>
+    </section>
+
+    <!-- Agenda -->
+    <section id="agenda" class="section">
+      <h2>🕗 Agenda du samedi 26 juillet</h2>
+      <table>
+        <thead>
+          <tr><th style="width:100px;">Heure</th><th>Activité</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>08h30</td><td>Accueil & small petit-déj (No Fotoam-gasy please et apportez quand même des snacks haha 🙈)</td></tr>
+          <tr><td>09h00</td><td>Ouverture officielle & pep talk</td></tr>
+          <tr><td>09h30</td><td>Team building & constitution des équipes (viens pas faire le miavonavona stp)</td></tr>
+          <tr><td>10h00</td><td>Début du hackathon 🧨</td></tr>
+          <tr><td>14h00</td><td>Pause collation 🍕 (pls bring some snacks *_* ) </td></tr>
+          <tr><td>16h00</td><td>Fin du dev 🛑</td></tr>
+          <tr><td>16h30</td><td>Pitches des projets finalistes 🎬 (3 min max par équipe)</td></tr>
+          <tr><td>17h25</td><td>Annonce des résultats & remise des prix 🏆</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Prizes -->
+    <section id="prizes" class="section">
+      <h2>🏆 Les prix à gagner <span class="pill">symboliques, mais le cœur y est 💖</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>🏅 Catégorie</th>
+            <th>Prix</th>
+            <th>Jury</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🧀 Homer Simpson — Meilleur pitch fun & visuel</td>
+            <td>100€</td>
+            <td>Fanamby</td>
+          </tr>
+          <tr>
+            <td>🧑‍🤝‍🧑 Minions — Meilleur esprit d’équipe</td>
+            <td>100€</td>
+            <td>Landy</td>
+          </tr>
+          <tr>
+            <td>🍍 SpongeBob — Équipe la plus persévérante</td>
+            <td>100€</td>
+            <td>Myriam</td>
+          </tr>
+          <tr>
+            <td>☕ Finalistes (6 à 7 équipes)</td>
+            <td>Mug x10</td>
+            <td>Code Talent</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Criteria -->
+    <section id="criteres" class="section">
+      <h2>✅ Critères de sélection</h2>
+      <ul>
+        <li>Projet fonctionnel (même absurde)</li>
+        <li>Créativité, esprit d’équipe, persévérance</li>
+        <li>Présentation fun et storytelling visuel (3 min max)</li>
+      </ul>
+    </section>
+
+    <!-- Medias -->
+    <section id="medias" class="section">
+      <h2>📸 Médias</h2>
+      <p>Photos & vidéos seront prises pendant l’événement – garde ton plus beau pyjama-costard prêt !</p>
+    </section>
+
+    <!-- Links -->
+    <section id="liens" class="section">
+      <h2>🔗 Liens à venir</h2>
+      <ul>
+        <li><a href="#" title="Discord" aria-disabled="true">Lien Discord</a> (à venir jeudi)</li>
+        <li><a href="#" title="DevPost" aria-disabled="true">Lien DevPost</a> (aussi jeudi)</li>
+      </ul>
+      <p style="color:var(--fg-dim); font-size:.85rem;">Remplace les <code>#</code> par les vrais liens dès qu’ils sont disponibles.</p>
+    </section>
+
+    <footer>
+      Made with 🤪 for the Stupid Hackathon Antananarivo 2025 · Contact orga sur Discord
+    </footer>
+  </main>
+</body>
+</html>
